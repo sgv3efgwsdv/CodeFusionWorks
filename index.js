@@ -1,8 +1,10 @@
-function sortedArrayToBST(nums) {
-  if (nums.length === 0) return null;
-  const mid = Math.floor(nums.length / 2);
-  const root = new TreeNode(nums[mid]);
-  root.left = sortedArrayToBST(nums.slice(0, mid));
-  root.right = sortedArrayToBST(nums.slice(mid + 1));
-  return root;
-}
+const factorial = (n) => {
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+};
